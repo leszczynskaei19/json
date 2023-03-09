@@ -1,30 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title></title>
-</head>
-<body>
-  <script>
-    const url = 'http://imiki.pl/cf';
-    const tableBody = document.querySelector('#dane tbody');
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(row => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = 
-            <td>${row.timeStamp}</td>
-            <td>${row.chanel}</td>
-            <td>${row.servername}</td>
-            <td>${row.ver}</td>
-            <td>${row.data}</td>
-          ;
-          tableBody.appendChild(tr);
-        });
-      })
-      .catch(error => console.error(error));
-  </script>
-</body>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dżejson</title>
+	</head>
+	<body>
+		<script type="module" src="script.js"></script>
+	</body>
 </html>
